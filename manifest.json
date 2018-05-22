@@ -1,0 +1,32 @@
+{
+	"manifest_version": 2,
+	"name": "Vocabulary",
+	"version": "1.0",
+	"description":"可右键查词",
+	
+	"icons":
+	{
+		"16": "img/icon.png",
+		"48": "img/icon.png",
+		"128": "img/icon.png"
+	},
+	
+	"permissions":
+	[
+		"contextMenus",
+		"tabs",
+		"webRequest",
+		"https://api.shanbay.com/"
+	],
+	
+	"browser_action": {
+        "default_icon": "icon.png",
+        "default_title":"defualt title",
+        "default_popup":"popup.html"
+    },
+	
+	"background":
+	{
+		"scripts": ["lib/config.js", "lib/shanbay_oauth2.js","js/background.js"]
+	}
+}
